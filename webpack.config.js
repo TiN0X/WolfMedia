@@ -1,7 +1,6 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = (env) => {
@@ -28,10 +27,10 @@ module.exports = (env) => {
             {
                 test: /\.(scss|css)$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'postcss-loader',
-                    'sass-loader',
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader'},
+                    {loader: 'postcss-loader'},
+                    {loader: 'sass-loader'},
                 ],  
             },
             {
@@ -52,7 +51,7 @@ module.exports = (env) => {
                 test: /\.(woff2?|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: path.join('assets', '[name].[contenthash][ext]'),
+                    filename: path.join('fonts', '[name].[contenthash][ext]'),
                 }
             }
         ],
