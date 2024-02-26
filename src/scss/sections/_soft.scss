@@ -1,0 +1,117 @@
+.soft {
+	padding-top: 120px;
+
+	&__wrapp {
+		text-align: center;
+	}
+
+	&__mini-title {
+		margin: 50px 0 30px 0;
+		color: $colorDefault;
+		font-family: $fontDefault;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 130%;
+		text-align: left;
+	}
+
+	&__title {
+		color: $colorDefault;
+		font-family: $fontDefault;
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 110%;
+		text-align: left;
+
+		&--top {
+			margin-top: 40px;
+		}
+
+		&--bottom {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__subblock {
+		margin-top: 40px;
+		display: flex;
+		gap: 30px;
+
+		&-description {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		&-cards {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		&-card {
+			border: 2px solid rgb(80, 54, 85);
+			padding: 15px;
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+
+		&-text {
+			color: $colorDefault;
+			font-family: $fontDefault;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 130%;
+		}
+
+		&-img {
+			width: 44px;
+			height: 44px;
+		}
+
+		&-btn {
+			@include btnDefault;
+
+			&:hover {
+				@include btnHover;
+			}
+
+			&:focus {
+				@include btnFocus;
+			}
+		}
+
+		&-player {
+			min-width: 770px;
+			position: relative;
+		}
+
+		&-video {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 9;
+		}
+
+		&-play {
+			position: absolute;
+			z-index: 11;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		&-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+		}
+	}
+}

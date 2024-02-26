@@ -1,0 +1,47 @@
+
+// BUTTON
+
+@mixin btnDefault{
+    background-color: rgb(242, 92, 58);
+    color: $colorDefault;
+    text-transform: uppercase;
+    padding: 16px 60px;
+}
+
+@mixin btnHover{
+    background-color: rgb(255, 133, 45);
+    color: $colorDefault;
+    text-transform: uppercase;
+    padding: 16px 60px;
+}
+
+@mixin btnFocus{
+    background-color: rgb(227, 67, 45);;
+    color: $colorDefault;
+    text-transform: uppercase;
+    padding: 16px 60px;
+}
+
+@mixin btnAlternativeDefault{
+    background-color: rgba(225, 225, 225, 0);
+    color: $colorDefault;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 2px solid $colorDefault;
+}
+
+@mixin btnAlternativeHover{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 2px solid $colorDefault;
+}
+
+@mixin btnAlternativeFocus{
+    background-color: rgb(80, 54, 85);
+    color: $colorDefault;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 2px solid $colorDefault;
+}

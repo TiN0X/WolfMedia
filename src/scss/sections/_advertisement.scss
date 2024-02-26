@@ -1,0 +1,35 @@
+.advertisement {
+	padding-top: 120px;
+
+	&__wrapp {
+		text-align: center;
+	}
+
+	&__text {
+		margin: 50px 0 50px 0;
+		text-align: left;
+		width: 100%;
+	}
+
+	&__paragraph {
+		color: $colorDefault;
+		font-family: $fontDefault;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 130%;
+	}
+
+	&__btn {
+		margin-top: 99px;
+		display: inline-block;
+		@include btnDefault;
+
+		&:hover {
+			@include btnHover;
+		}
+
+		&:focus {
+			@include btnFocus;
+		}
+	}
+}

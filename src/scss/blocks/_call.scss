@@ -1,0 +1,26 @@
+.call {
+	color: $colorDefault;
+	font-family: $fontDefault;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 170%;
+	display: flex;
+	align-items: center;
+	transition: 0.4s ease;
+
+	&::before {
+		content: '';
+		background: url(assets/telephone-icon.svg);
+		width: 23px;
+		height: 24px;
+		margin-right: 21px;
+	}
+
+	&:hover {
+		transform: scale(0.95);
+	}
+
+	&--footer {
+		color: rgb(146, 115, 152);
+	}
+}

@@ -1,0 +1,14 @@
+.social {
+	display: flex;
+	gap: 16px;
+
+	&__svg {
+		width: 24px;
+		height: 24px;
+		fill: rgb(146, 115, 152);
+
+		&:hover {
+			fill: $colorDefault;
+		}
+	}
+}

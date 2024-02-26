@@ -1,0 +1,135 @@
+.header {
+	padding: 20px 0;
+	border-bottom: 2px solid rgba(146, 115, 152, 0.2);
+
+	&__container {
+		max-width: 1920px;
+		padding: 0 30px;
+		margin: 0 auto;
+	}
+
+	&__wrapp {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__burger {
+		display: none;
+	}
+
+	&__call {
+		display: none;
+	}
+
+	&__img-logo {
+		&--adaptive {
+			display: none;
+		}
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+		gap: 60px;
+	}
+
+	&__list {
+		display: flex;
+		gap: 50px;
+
+		&--burger {
+			flex-direction: column;
+		}
+	}
+
+	&__link-nav {
+		color: rgb(146, 115, 152);
+		font-family: $fontDefault;
+		font-size: 14px;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $colorDefault;
+			border-bottom: 2px solid $colorAccent;
+			padding-bottom: 46px;
+		}
+
+		&--active {
+			padding-bottom: 46px;
+			color: $colorDefault;
+			border-bottom: 2px solid $colorAccent;
+		}
+
+		&--burger {
+			padding-left: 10px;
+			font-size: 18px;
+
+			&:hover {
+				border-left: 2px solid $colorAccent;
+			}
+			&--active {
+				padding-bottom: 0px;
+				border-bottom: none;
+				border-left: 2px solid $colorAccent;
+			}
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+
+	&__btn-modal {
+		@include btnAlternativeDefault;
+
+		&:hover {
+			@include btnAlternativeHover;
+		}
+	}
+
+	&__btn-img {
+		display: none;
+	}
+}
+
+.modal-burger {
+	visibility: hidden;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(43, 18, 48, 0.8);
+
+	&__aside {
+		position: relative;
+		padding: 30px 0;
+		width: 60%;
+		transform: translateX(-100%);
+		min-height: 100vh;
+		background: rgb(59, 35, 65);
+		transition: 0.4s ease;
+
+		&--active {
+			transform: translateX(0);
+		}
+	}
+
+	&--active {
+		visibility: visible;
+	}
+}
+
+.call {
+	&__modal {
+		position: absolute;
+		z-index: 100;
+		bottom: 20px;
+		left: 10px;
+	}
+}

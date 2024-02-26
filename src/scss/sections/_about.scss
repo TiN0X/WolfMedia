@@ -1,0 +1,97 @@
+.about {
+	padding-top: 120px;
+
+	&__wrapp {
+		margin-top: 50px;
+		display: flex;
+		gap: 30px;
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__card {
+		padding: 12px 20px;
+		border: 2px solid rgb(80, 54, 85);
+		max-width: 370px;
+	}
+
+	&__text {
+		font-family: $fontDefault;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 130%;
+		text-align: center;
+		color: $colorDefault;
+
+		&--accent {
+			color: $colorAccent;
+		}
+	}
+
+	&__slider {
+		overflow-x: hidden;
+		max-width: 770px;
+		position: relative;
+
+		&-block {
+			width: 100%;
+		}
+
+		&-slide {
+			min-width: 770px;
+		}
+
+		&-section {
+			display: flex;
+		}
+
+		&-transform {
+			position: absolute;
+			bottom: 0;
+			display: flex;
+			min-width: 1552px;
+			transition: 0.4s ease;
+		}
+
+		&-img {
+			width: 194px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&-next {
+			position: absolute;
+			z-index: 10;
+			right: 0;
+			bottom: 0;
+			min-height: 110px;
+			width: 17px;
+			transition: 0.3s ease;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+		}
+
+		&-preview {
+			position: absolute;
+			z-index: 10;
+			left: 0;
+			bottom: 0;
+			min-height: 110px;
+			transform: rotate(-180deg);
+			width: 17px;
+			transition: 0.3s ease;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+		}
+	}
+}

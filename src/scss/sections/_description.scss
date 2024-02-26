@@ -1,0 +1,37 @@
+.description {
+
+	&__wrapp {
+		text-align: center;
+	}
+
+    &__paragraphs{
+        margin: 50px 0 50px 0;
+    }
+
+    &__paragraph{
+        color: $colorDefault;
+        font-family: $fontDefault;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 130%;
+        margin-top: 25px;
+
+        &:first-child{
+            margin: 0;
+        }
+    }
+
+    &__btn-link{
+        display: inline-block;
+        @include btnDefault;
+        transition: 0.3s ease;
+
+        &:hover{
+            @include btnHover;
+        }
+
+        &:focus{
+            @include btnFocus;
+        }
+    }
+}
